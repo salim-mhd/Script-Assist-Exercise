@@ -1,5 +1,6 @@
 import { create } from "zustand";
 
+// user InterFace
 interface UserDetails {
   email: string;
   password: string;

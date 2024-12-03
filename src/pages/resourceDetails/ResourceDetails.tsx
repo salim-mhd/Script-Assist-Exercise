@@ -116,14 +116,14 @@ const ResourceDetails: React.FC = () => {
                 <Stack spacing="xs">
                   <Text>Birth Year: {data.birth_year}</Text>
                   <Text>
-                    Homeworld:{" "}
+                    Home world:{" "}
                     <a
                       href={data.homeworld}
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{ color: "#007bff" }}
                     >
-                      View Homeworld
+                      View Home world
                     </a>
                   </Text>
                 </Stack>
@@ -184,7 +184,7 @@ const ResourceDetails: React.FC = () => {
             <Group mt="lg" dir="column" spacing="xs">
               <Group>
                 <IconRocket size={24} />
-                <Title order={3}>Starships</Title>
+                <Title order={3}>Star ships</Title>
               </Group>
               {data.starships.length > 0 ? (
                 data.starships.map((starship, index) => (
@@ -201,7 +201,7 @@ const ResourceDetails: React.FC = () => {
                   </Badge>
                 ))
               ) : (
-                <Text>No starships available</Text>
+                <Text>No star ships available</Text>
               )}
             </Group>
           </Card>

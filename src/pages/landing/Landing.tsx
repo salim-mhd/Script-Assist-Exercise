@@ -5,10 +5,10 @@ import ResourceList from "../../components/resourceList/ResourceList";
 
 const Landing: FC = () => {
   return (
-    <div>
+    <Container fluid>
       <Navbar />
       <ResourceList />
-    </div>
+    </Container>
   );
 };
 

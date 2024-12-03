@@ -70,12 +70,13 @@ const Login: React.FC = () => {
       (user) => user.email === email && user.password === password
     );
 
+    // Pass user details here and Redirect to private page
     if (user) {
       const mockToken = "mocked-jwt-token";
-      login({ token: mockToken, userDetails: user }); // Pass user details here
+      login({ token: mockToken, userDetails: user });
       setLoading(false);
       setError(null);
-      navigate("/"); // Redirect to private page
+      navigate("/");
     } else {
       setLoading(false);
       setError("Invalid email or password. Please try again.");
@@ -124,14 +125,14 @@ const Login: React.FC = () => {
                       mt="md"
                       size="md"
                       labelProps={{
-                        style: { color: "black" }, // Change the label color to black
+                        style: { color: "black" },
                       }}
-                      radius="xs" // Match the radius with PasswordInput
+                      radius="xs"
                       withAsterisk
                       autoFocus
                       styles={{
                         input: {
-                          backgroundColor: "transparent", // Set the background color to transparent for both inputs
+                          backgroundColor: "transparent",
                         },
                       }}
                     />
@@ -150,11 +151,11 @@ const Login: React.FC = () => {
                       error={errors.password?.message}
                       mt="md"
                       size="md"
-                      radius="lg" // Set the same radius as TextInput to match
+                      radius="lg"
                       withAsterisk
                       styles={{
                         input: {
-                          backgroundColor: "transparent", // Set the background color to transparent for both inputs
+                          backgroundColor: "transparent",
                         },
                       }}
                     />
